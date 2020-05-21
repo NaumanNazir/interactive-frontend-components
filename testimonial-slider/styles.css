@@ -1,0 +1,101 @@
+:root {
+  --darkBlue: hsl(240, 38%, 20%);
+  --grayishBlue: hsl(240, 18%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--darkBlue);
+  margin: 0;
+}
+
+.testimonial-section {
+  background-image: url("./images/pattern-curve.svg");
+  background-size: auto;
+  background-position-x: left;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.slide {
+  background-image: url("./images/pattern-bg.svg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.current {
+  opacity: 1;
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.text {
+  width: 65%;
+  position: relative;
+  left: 125px;
+}
+
+.text img {
+  position: absolute;
+  top: -44px;
+  left: 85px;
+}
+
+.text span {
+  color: var(--grayishBlue);
+  font-size: 24px;
+  font-weight: 300;
+  margin-left: 5px;
+}
+
+.image {
+  width: 70%;
+  padding: 4rem;
+}
+
+.profile-img {
+  width: 100%;
+  box-shadow: 0px 20px 20px -6px #40404047;
+}
+
+.arrows {
+  position: absolute;
+  top: 81%;
+  left: 55%;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 20px 20px -6px #40404047;
+  padding: 0.5rem 0;
+}
+
+.arrows a {
+  text-decoration: none;
+  padding: 0 1rem;
+}
+

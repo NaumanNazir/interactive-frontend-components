@@ -24,14 +24,14 @@ body {
   display: flex;
   align-items: center;
   height: 100vh;
-  position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .slider {
   width: 90%;
   max-width: 1300px;
   margin: 0 auto;
+  position: relative;
 }
 
 .slide {

@@ -1,3 +1,12 @@
+// This validation is done by using JS.
+
+// But now in HTML5, you do not need JS for simple validations. You can use required attribute in the input
+// for the fields you don't want user to leave empty. For email, you can set type to email so that
+// user don't enter invlaid emial.
+
+// Note: This is client side validation, don't forget to validate on server side.
+
+
 // grabing all the required elements
 const form = document.getElementById("form");
 const firstName = document.getElementById("first-name");
@@ -10,10 +19,9 @@ form.addEventListener("submit", formValidation);
 
 // functions
 
-
 function formValidation(e) {
   e.preventDefault();
-
+ 
   checkInputs();
 }
 
@@ -42,6 +50,7 @@ function checkInputs() {
   if (emailValue === "") {
     setErrorFor(email, "Email cannot be empty");
   } else if (!isEmail(emailValue)) {
+    // console.log("here");
     setErrorFor(email, "Looks like this is not an email");
   } else {
     setSuccessFor(email);
@@ -75,6 +84,7 @@ function setSuccessFor(input) {
 }
 
 // checks email format 
-function isEmail(email) {
-  return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+function isEmail(mail) {
+  const format = /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/;
+  return format.test(mail);
 }

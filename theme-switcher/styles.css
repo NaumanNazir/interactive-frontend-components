@@ -1,18 +1,102 @@
-/* :root {
-  --red: hsl(0, 100%, 74%);
-  --green: hsl(154, 59%, 51%);
-  --blue: hsl(248, 32%, 49%);
-  --darkBlue: hsl(249, 10%, 26%); 
-  --grayishBlue: hsl(246, 25%, 77%);
-} */
+:root {
+  --brightRed: hsl(356, 69%, 56%);
+  --limeGreen: hsl(163, 72%, 41%);
+  --twitter: hsl(203, 89%, 53%);
+  --facebook: hsl(208, 92%, 53%); 
+  --instaYellow: hsl(37, 97%, 70%);
+  --instaRed: hsl(329, 70%, 58%);
+  --youTube: hsl(348, 97%, 39%);
+
+  /* light theme */
+  --lightToggle: hsl(230, 22%, 74%);
+  --paleBlue: hsl(225, 100%, 98%);
+  --lightGrayishBlue: hsl(227, 47%, 96%);
+  --darkGrayishBlue: hsl(228, 12%, 44%);
+  --darkBlueText: hsl(230, 17%, 14%);
+
+  /* dark theme */
+  --darkToggleBlue: hsl(210, 78%, 56%);
+  --darkToggleGreen: hsl(146, 68%, 55%);
+  --darkBlueBG: hsl(230, 17%, 14%);
+  --darkBlueTopBG: hsl(232, 19%, 15%);
+  --darkDesturatedBlue: hsl(228, 28%, 20%);
+  --desturatedBlue: hsl(228, 34%, 66%);
+
+}
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
-  color: white;
   margin: 0;
+}
+
+.gray-top-bg {
+  height: 30vh;
+  background: var(--paleBlue);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  top: -175px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand h1 {
+  margin: 0;
+}
+
+.brand small {
+  font-weight: 700;
+  color: var(--darkGrayishBlue);
+}
+
+.toggle-btn label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--darkGrayishBlue);
+  margin-right: 5px;
+}
+
+.toggle-btn input[type="checkbox"] {
+  position: relative;
+  top: 10px;
+  width: 50px;
+  height: 25px;
+  -webkit-appearance: none;
+  background-color: var(--lightToggle);
+  outline: none;
+  border-radius: 20px;
+  transition: .5s;
+}
+
+.toggle-btn input:checked[type="checkbox"] {
+  background: linear-gradient(60deg, var(--darkToggleBlue), var(--darkToggleGreen));
+}
+
+.toggle-btn input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 21px;
+  height: 21px;
+  border-radius: 20px;
+  background-color: var(--paleBlue);
+  transition: .5s;
+}
+
+.toggle-btn input:checked[type="checkbox"]::before {
+  left: 26px;
 }

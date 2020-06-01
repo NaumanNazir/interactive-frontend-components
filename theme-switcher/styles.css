@@ -100,3 +100,7 @@ body {
 .toggle-btn input:checked[type="checkbox"]::before {
   left: 26px;
 }
+
+.followers-updates-grid {
+  display: grid;
+}

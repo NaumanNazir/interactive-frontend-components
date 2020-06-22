@@ -1,0 +1,125 @@
+/* Always try to import fonts in your HTML. I imported here just for demonstration */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+html, body {
+  background: #a9d7d1;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-sarif;
+  min-width: 320px;
+}
+
+.main-content {
+  margin-top: 5rem;
+}
+
+#form-area {
+  background-color: #fafafa;
+  border-radius: 4px;
+  width: 75%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  vertical-align: top;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.right-tab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.message {
+  display: block;  
+  font-style: italic;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.error {
+  color: hsl(0, 84%, 59%);
+  visibility: visible;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.airlines-dropdown {
+  height: 35px;
+  width: 200px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+.user-ratings, input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  left: -45px;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#submit {
+  font-size: 17px;
+  background-color: #59ace0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.cancelation-hidden, .delay-hidden {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+ }
+
+/* media queries */
+
+@media screen and (max-width: 833px) {
+  .input-field {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 522px) {
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .right-tab {
+    width: 100%;
+  }
+}

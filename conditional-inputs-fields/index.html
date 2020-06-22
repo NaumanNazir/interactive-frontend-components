@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <title> Cancelled/delayed flights </title>
+</head>
+<body>
+  <main class="main-content">
+    <h1 class="title"> Claim form for cancelled/delayed flights </h1>
+    <div id="form-area">
+      <p id="description"> 
+        Please provide information below
+      </p>
+      <form id="claim-form">
+        <!-- airlines name dropdown -->
+        <div class="row">
+          <div class="labels">
+            <label for="airlines names"> * Which Airlines are you using? 
+            </label>
+          </div>
+          <div class="right-tab">
+            <select autofocus id="airlines-dropdown" name="airlines names" class="airlines-dropdown" >
+              <option value="select-an-option"> Select an option </option>
+              <option value="scandinavian-airlines"> Scandinavian Airlines </option>
+              <option value="british-airways"> British Airways </option>
+              <option value="lufthansa"> Lufthansa </option>
+              <option value="klm"> KLM </option>
+              <option value="air-france"> Air France </option>
+            </select>
+            <small class="message"> error </small>
+          </div>
+        </div>
+
+        <!-- flight date and time -->
+        <div class="row">
+          <div class="labels">
+            <label for="flight date and time"> * Enter Flight date and time: </label>
+          </div>
+          <div class="right-tab">
+            <input autofocus type="datetime-local" id="flight-date-and-time" name="flight date and time" class="input-field" >
+            <small class="message"> error </small>
+          </div>
+        </div>
+        
+        <!-- flight interuption type checkboxes -->
+        <div class="row">
+          <div class="labels">
+            <label for="interuption"> * What flight interuption you faced? </label>
+          </div>
+          <div class="right-tab">
+            <ul id="interuption">
+              <li class="checkbox">
+                <label for="cancellation checkbox">
+                  <input name="cancellation" value="1" type="checkbox" id="cancellation-checkbox" > 
+                  Cancellation
+                </label>
+              </li>
+              <li class="checkbox">
+                <label for="delay checkbox">
+                  <input name="delay" value="2" type="checkbox" id="delay-checkbox" > 
+                  Delay
+                </label>
+              </li>
+            </ul>
+            <small class="message"> error </small>
+          </div>
+        </div>
+        
+        <!-- if cancellation is checked -->
+        <div class="cancelation-hidden">
+          <!-- flight number input -->
+          <div class="row">
+            <div class="labels">
+              <label for="flight number"> * flight number: </label>
+            </div>
+            <div class="right-tab">
+              <input autofocus type="text" id="flight-number" name="flight number" class="input-field" placeholder="Enter your flight number" >
+              <small class="message"> error </small>
+            </div>
+          </div>
+
+          <!-- flight number input -->
+          <div class="row">
+            <div class="labels">
+              <label for="new flight date and time"> * Enter Flight date and time: </label>
+            </div>
+            <div class="right-tab">
+              <input autofocus type="datetime-local" id="new-flight-date-and-time" name="new flight date and time" class="input-field" >
+              <small class="message"> error </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- if delay is checked -->
+        <div class="delay-hidden">
+          <!-- flight number input -->
+          <div class="row">
+            <div class="labels">
+              <label for="delay-time"> * Delay Time: </label>
+            </div>
+            <div class="right-tab">
+              <input autofocus type="text" id="delay-time" name="delay time" class="input-field" placeholder="Enter your delay time" >
+              <small class="message"> error </small>
+            </div>
+          </div>
+        </div>
+        
+        <button id="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
